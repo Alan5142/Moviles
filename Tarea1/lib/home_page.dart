@@ -28,103 +28,101 @@ class _HomePageState extends State<HomePage> {
         decoration: BoxDecoration(border: Border.all()),
         width: double.infinity,
         margin: const EdgeInsets.all(10),
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(
-                    Icons.account_circle,
-                    size: 48,
-                  ),
-                  Column(
-                    children: [
-                      Text("Flutter McFlutter",
-                          textAlign: TextAlign.left,
-                          style: Theme.of(context).textTheme.titleLarge),
-                      Text("Experienced App Developer",
-                          textAlign: TextAlign.left,
-                          style: Theme.of(context).textTheme.bodySmall),
-                    ],
-                  )
-                ],
-              ),
-              Container(
-                margin:
-                    const EdgeInsets.only(left: 8, right: 8, top: 8, bottom: 8),
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("123 Main Street"),
-                    Text("(415) 555-0198"),
-                  ],
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Icon(
+                  Icons.account_circle,
+                  size: 48,
                 ),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                Column(
+                  children: [
+                    Text("Flutter McFlutter",
+                        textAlign: TextAlign.left,
+                        style: Theme.of(context).textTheme.titleLarge),
+                    Text("Experienced App Developer",
+                        textAlign: TextAlign.left,
+                        style: Theme.of(context).textTheme.bodySmall),
+                  ],
+                )
+              ],
+            ),
+            Container(
+              margin:
+                  const EdgeInsets.only(left: 8, right: 8, top: 8, bottom: 8),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  IconButton(
-                    icon: const Icon(Icons.accessibility),
-                    color: _getButtonColor(_accessibilityButtonState),
-                    onPressed: () {
-                      setState(() {
-                        _accessibilityButtonState = !_accessibilityButtonState;
-                      });
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text("You pressed the accessibility button"),
-                        ),
-                      );
-                    },
-                  ),
-                  IconButton(
-                    icon: const Icon(Icons.timer),
-                    color: _getButtonColor(_timerButtonState),
-                    onPressed: () {
-                      setState(() {
-                        _timerButtonState = !_timerButtonState;
-                      });
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text("You pressed the timer button"),
-                        ),
-                      );
-                    },
-                  ),
-                  IconButton(
-                    icon: const Icon(Icons.phone_android),
-                    color: _getButtonColor(_androidButtonState),
-                    onPressed: () {
-                      setState(() {
-                        _androidButtonState = !_androidButtonState;
-                      });
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text("You pressed the android button"),
-                        ),
-                      );
-                    },
-                  ),
-                  IconButton(
-                    icon: const Icon(Icons.phone_iphone),
-                    color: _getButtonColor(_iphoneButtonState),
-                    onPressed: () {
-                      setState(() {
-                        _iphoneButtonState = !_iphoneButtonState;
-                      });
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text("You pressed the iphone button"),
-                        ),
-                      );
-                    },
-                  ),
+                  Text("123 Main Street"),
+                  Text("(415) 555-0198"),
                 ],
               ),
-            ],
-          ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.accessibility),
+                  color: _getButtonColor(_accessibilityButtonState),
+                  onPressed: () {
+                    setState(() {
+                      _accessibilityButtonState = !_accessibilityButtonState;
+                    });
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text("You pressed the accessibility button"),
+                      ),
+                    );
+                  },
+                ),
+                IconButton(
+                  icon: const Icon(Icons.timer),
+                  color: _getButtonColor(_timerButtonState),
+                  onPressed: () {
+                    setState(() {
+                      _timerButtonState = !_timerButtonState;
+                    });
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text("You pressed the timer button"),
+                      ),
+                    );
+                  },
+                ),
+                IconButton(
+                  icon: const Icon(Icons.phone_android),
+                  color: _getButtonColor(_androidButtonState),
+                  onPressed: () {
+                    setState(() {
+                      _androidButtonState = !_androidButtonState;
+                    });
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text("You pressed the android button"),
+                      ),
+                    );
+                  },
+                ),
+                IconButton(
+                  icon: const Icon(Icons.phone_iphone),
+                  color: _getButtonColor(_iphoneButtonState),
+                  onPressed: () {
+                    setState(() {
+                      _iphoneButtonState = !_iphoneButtonState;
+                    });
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text("You pressed the iphone button"),
+                      ),
+                    );
+                  },
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );
