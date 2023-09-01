@@ -71,11 +71,13 @@ class _HomePageState extends State<HomePage> {
                     setState(() {
                       _accessibilityButtonState = !_accessibilityButtonState;
                     });
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text("You pressed the accessibility button"),
-                      ),
-                    );
+                    ScaffoldMessenger.of(context)
+                      ..removeCurrentSnackBar()
+                      ..showSnackBar(
+                        const SnackBar(
+                          content: Text("You pressed the accessibility button"),
+                        ),
+                      );
                   },
                 ),
                 IconButton(
@@ -85,11 +87,13 @@ class _HomePageState extends State<HomePage> {
                     setState(() {
                       _timerButtonState = !_timerButtonState;
                     });
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text("You pressed the timer button"),
-                      ),
-                    );
+                    ScaffoldMessenger.of(context)
+                      ..removeCurrentSnackBar()
+                      ..showSnackBar(
+                        const SnackBar(
+                          content: Text("You pressed the timer button"),
+                        ),
+                      );
                   },
                 ),
                 IconButton(
@@ -99,11 +103,13 @@ class _HomePageState extends State<HomePage> {
                     setState(() {
                       _androidButtonState = !_androidButtonState;
                     });
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text("You pressed the android button"),
-                      ),
-                    );
+                    ScaffoldMessenger.of(context)
+                      ..removeCurrentSnackBar()
+                      ..showSnackBar(
+                        const SnackBar(
+                          content: Text("You pressed the android button"),
+                        ),
+                      );
                   },
                 ),
                 IconButton(
@@ -113,11 +119,13 @@ class _HomePageState extends State<HomePage> {
                     setState(() {
                       _iphoneButtonState = !_iphoneButtonState;
                     });
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text("You pressed the iphone button"),
-                      ),
-                    );
+                    ScaffoldMessenger.of(context)
+                      ..removeCurrentSnackBar()
+                      ..showSnackBar(
+                        const SnackBar(
+                          content: Text("You pressed the iphone button"),
+                        ),
+                      );
                   },
                 ),
               ],
